@@ -52,7 +52,7 @@ app.all("/", async (req, res) => {
 			res.end();
 			return;
 		}
-		if (url.indexOf("https://") !== -1 && url.indexOf("http://") !== -1) {
+		if (url.indexOf("https://") !== -1 || url.indexOf("http://") !== -1) {
 			res.json({
 				success: false,
 				message: "Without http or https. like google.com"
