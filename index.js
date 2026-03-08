@@ -52,10 +52,10 @@ app.all("/", async (req, res) => {
 			res.end();
 			return;
 		}
-		if (url.indexOf("https://") !== -1 || url.indexOf("http://") !== -1) {
+		if (url.indexOf("https://") === -1) {
 			res.json({
 				success: false,
-				message: "Without http or https. like google.com"
+				message: "Use or https. like https://google.com"
 			})
 			res.end();
 			return;
@@ -104,7 +104,7 @@ app.get("/:route", async (req, res) => {
 			res.status(404).send("Page Not Found");
 			return;
 		}
-		res.redirect("https://" + data.url);
+		res.redirect(data.url);
 		res.end();
 	} catch ({ message }) {
 		console.log(message);
