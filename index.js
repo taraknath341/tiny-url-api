@@ -55,7 +55,7 @@ app.all("/", async (req, res) => {
 		if (url.indexOf("https://") === -1) {
 			res.json({
 				success: false,
-				message: "Use or https. like https://google.com"
+				message: "Use https. like https://google.com"
 			})
 			res.end();
 			return;
