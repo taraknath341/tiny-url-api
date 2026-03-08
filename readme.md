@@ -22,7 +22,7 @@ PORT=<Enter your custom port>
 ### Example
 
 ```env
-MONGODB_URL=mongodb+srv://username:password@cluster.mongodb.net/database_name
+MONGODB_URL=mongodb+srv://user:pass@cluster.mongodb.net/
 PORT=3000
 ```
 
