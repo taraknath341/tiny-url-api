@@ -66,7 +66,7 @@ app.all("/", async (req, res) => {
 		if (data != null) {
 			res.json({
 				success: true,
-				message: `${req.host}/${data.route}`
+				message: `https://${req.host}/${data.route}`
 			});
 			res.end();
 			return;
@@ -85,7 +85,7 @@ app.all("/", async (req, res) => {
 		await collection.insertOne({ url, route });
 		res.json({
 			success: true,
-			message: `${req.host}/${route}`
+			message: `https://${req.host}/${route}`
 		})
 		res.end();
 	} catch ({ message }) {
